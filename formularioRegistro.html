@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <title>Registro Usuario</title>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label
+          >Nombres:
+          <input
+            required
+            placeholder="Robert"
+            autocomplete="given-name"
+            id="txtNombres"
+        /></label>
+      </div>
+      <div>
+        <label
+          >Apellidos:
+          <input
+            required
+            placeholder="Zambrano"
+            autocomplete="family-name"
+            id="txtApellidos"
+        /></label>
+      </div>
+      <label>Sexo:</label><br />
+      <input type="radio" name="rgSexo" value="m" />Masculino<br />
+      <input type="radio" name="rgSexo" value="f" />Femenino<br />
+
+      <label>Juego Favorito:</label><br />
+      <input type="checkbox" name="chkJuego" value="pacman" />PacMan<br />
+      <input type="checkbox" name="chkJuego" value="nfs" />Need For Speed<br />
+      <input type="checkbox" name="chkJuego" value="sc2" />StarCraft II<br />
+
+      <select name="bebida">
+        <option value="a">Agua</option>
+        <option value="s">Soda</option>
+        <option value="j" selected>Jugo</option>
+      </select>
+
+      <div>
+        <label>Fecha de Nacimiento</label>
+        <input id="fecNac" autocomplete="bday" type="date" required />
+      </div>
+      <div>
+        <label>Correo Electronico</label>
+        <input
+          id="txtEmail"
+          placeholder="rzambrano@aitec.edu.ec"
+          required
+          autocomplete="email"
+          type="email"
+        />
+      </div>
+      <div>
+        <label>Telefono</label>
+        <input
+          id="txtTel"
+          autocomplete="tel-national"
+          placeholder="0989764180"
+          minlength="10"
+          maxlength="10"
+          type="tel"
+        />
+      </div>
+      <label>Direccion</label>
+      <textarea name="direccion" maxlength="100"></textarea>
+      <div>
+        <label>Usuario</label>
+        <input id="txtUser" required autocomplete="username" />
+      </div>
+      <div>
+        <label>Contraseña</label>
+        <input
+          id="txtPass"
+          required
+          minlength="6"
+          maxlength="8"
+          autocomplete="new-password"
+          type="password"
+        />
+      </div>
+      <div>
+        <input type="reset" />
+        <input type="submit" />
+      </div>
+    </form>
+  </body>
+</html>
