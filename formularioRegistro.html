@@ -1,77 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Registro Usuario</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <form>
-      <div>
-        <label
-          >Nombres:
-          <input
-            required
-            placeholder="Robert"
-            autocomplete="given-name"
-            id="txtNombres"
-        /></label>
-      </div>
-      <div>
-        <label
-          >Apellidos:
-          <input
-            required
-            placeholder="Zambrano"
-            autocomplete="family-name"
-            id="txtApellidos"
-        /></label>
-      </div>
-      <label>Sexo:</label><br />
-      <input type="radio" name="rgSexo" value="m" />Masculino<br />
-      <input type="radio" name="rgSexo" value="f" />Femenino<br />
-
-      <label>Juego Favorito:</label><br />
-      <input type="checkbox" name="chkJuego" value="pacman" />PacMan<br />
-      <input type="checkbox" name="chkJuego" value="nfs" />Need For Speed<br />
-      <input type="checkbox" name="chkJuego" value="sc2" />StarCraft II<br />
-
-      <select name="bebida">
-        <option value="a">Agua</option>
-        <option value="s">Soda</option>
-        <option value="j" selected>Jugo</option>
-      </select>
-
-      <div>
-        <label>Fecha de Nacimiento</label>
-        <input id="fecNac" autocomplete="bday" type="date" required />
-      </div>
-      <div>
-        <label>Correo Electronico</label>
+    <form class="col-3">
+      <div class="row form-floating mb-3">
         <input
-          id="txtEmail"
-          placeholder="rzambrano@aitec.edu.ec"
+          type="text"
+          class="form-control"
           required
-          autocomplete="email"
-          type="email"
+          placeholder="Nombres"
+          autocomplete="given-name"
+          aria-label="Nombres"
+          id="txtNom"
         />
+        <label for="txtNom">Nombres</label>
       </div>
-      <div>
-        <label>Telefono</label>
+      <div class="row form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          required
+          placeholder="Apellidos"
+          autocomplete="family-name"
+          aria-label="Apellidos"
+        />
+        <label for="txtApe">Apellidos</label>
+      </div>
+      <div class="mb-3">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="rgSexo"
+            id="rgMasc"
+          />
+          <label class="form-check-label" for="rgMasc"> Masculino </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="rgSexo"
+            id="rgFem"
+          />
+          <label class="form-check-label" for="rgFem"> Femenino </label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value="pacman"
+            id="pacman"
+          />
+          <label class="form-check-label" for="pacman"> PacMan </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value="nfs"
+            id="nfs"
+          />
+          <label class="form-check-label" for="nfs"> Need For Speed </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value="sc2"
+            id="sc2"
+          />
+          <label class="form-check-label" for="sc2"> StarCraft II </label>
+        </div>
+      </div>
+
+      <!-- <div class="mb-3">
+        <select class="form-select" aria-label="Select Bebida">
+          <option selected>Click para seleccionar una opcion</option>
+          <option value="a">Agua</option>
+          <option value="s">Soda</option>
+          <option value="j">Jugo</option>
+        </select>
+      </div> -->
+
+      <div class="mb-3">
+        <label for="fecNac" class="form-label">Fecha de Nacimiento</label>
+        <input type="date" required class="form-control" id="fecNac" />
+      </div>
+
+      <div class="mb-3">
+        <label for="txtCorreo" class="form-label">Correo Electronico</label>
+        <input
+          type="email"
+          required
+          placeholder="rzambrano@aitec.edu.ec"
+          autocomplete="email"
+          class="form-control"
+          id="txtCorreo"
+          aria-describedby="correoAyuda"
+        />
+        <div id="correoAyuda" class="form-text">
+          Tu correo nunca sera compartido con alguien mas.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="txtTel" class="form-label">Telefono</label>
         <input
           id="txtTel"
           placeholder="0989764180"
           minlength="10"
           maxlength="10"
           type="tel"
+          class="form-control"
         />
       </div>
-      <label>Direccion</label>
-      <textarea name="direccion" maxlength="100"></textarea>
-      <div>
-        <label>Usuario</label>
-        <input id="txtUser" required autocomplete="username" />
+
+      <div class="mb-3">
+        <label for="txtDir" class="form-control">Direccion</label>
+        <textarea
+          id="txtDir"
+          rows="4"
+          class="form-control"
+          maxlength="100"
+        ></textarea>
       </div>
-      <div>
-        <label>Contraseña</label>
+
+      <div class="mb-3">
+        <label for="txtUsu" class="form-control">Usuario</label>
+        <input
+          class="form-control"
+          id="txtUsu"
+          required
+          autocomplete="username"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="txtPass" class="form-control">Contraseña</label>
         <input
           id="txtPass"
           required
@@ -79,12 +157,18 @@
           maxlength="8"
           autocomplete="new-password"
           type="password"
+          class="form-control"
         />
       </div>
       <div>
-        <input type="reset" />
-        <input type="submit" />
+        <button type="button" class="btn btn-primary">Enviar</button>
+        <button type="button" class="btn btn-secondary">Reset</button>
       </div>
     </form>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

@@ -1,0 +1,47 @@
+p {
+    color: orange; /* Color de texto */
+  }
+
+  table {
+    background-color: seagreen;
+
+  }
+  th {
+    color: blueviolet;
+    font-style: italic;
+  }
+
+  td {
+    color: whitesmoke;
+  }
+
+  ol li {
+    color:coral;
+  }
+
+  ul{
+    background-color: rgb(25, 0, 255);
+
+  }
+
+  ul li {
+    color: aquamarine;
+  }
+
+  /* Por ID */
+  #titveg {
+    color: blue;
+  }
+
+  /* Por Clase CSS */
+  .cabList{
+    color: yellowgreen;
+  }
+
+  /* Por Elemento */
+  div {
+    color: chocolate;
+  }
+
+  /* #id <- .Clase <-  tipoElemento */
+
